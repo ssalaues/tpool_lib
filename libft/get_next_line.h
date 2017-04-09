@@ -12,7 +12,7 @@
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
-# define BUFF_SIZE 1000
+# define BUFF_SIZE 100000
 # include "libft.h"
 
 typedef struct		s_gnl
