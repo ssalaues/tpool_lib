@@ -16,7 +16,7 @@ t_img	readin(int fd)
 	img.ct = 0;
 	while(get_next_line(fd, &line) && img.ct <= 1000)
 	{
-		img.data[img.ct] = ft_atoi_array(line);
+	//	img.data[img.ct] = ft_atoi_array(line);
 		ft_strdel(&line);
 		img.ct++;
 	}
@@ -33,7 +33,8 @@ int	main(int ac, char **av)
 		if((fd = open(av[1], O_RDONLY)) < 0 || !ft_strstr(av[1], ".pgm"))
 			return(0);
 		img = readin(fd);
-		printf("%s\n%d %d\n%d\n", img.type, img.w, img.h, img.g);
+		printf("%s\n%d %d\n%d\ncount:%d\n", img.type, img.w, img.h, img.g, img.ct);
+	//	sleep(20);
 	}
 	return (0);
 }
