@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-static t_gnl		*gnl_lstnew(t_gnl *bl, size_t len, int fd)
+t_gnl		*gnl_lstnew(t_gnl *bl, size_t len, int fd)
 {
 	t_gnl			*new;
 
@@ -38,7 +38,7 @@ static t_gnl		*gnl_lstnew(t_gnl *bl, size_t len, int fd)
 	return (bl);
 }
 
-static int			line_cp(t_gnl *bl, char **line)
+int			line_cp(t_gnl *bl, char **line)
 {
 	bl->t2 = bl->data;
 	*line = ft_strndup(bl->data, ft_wordlen(bl->data, '\n'));
